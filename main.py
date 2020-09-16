@@ -38,6 +38,7 @@ def main():
     while (True):
         inString = input("Math Expression: ")
         #comment
+        #comment
         if(inString == '^^'):
             print("\nThank you!\n")
             print("Exiting...")
