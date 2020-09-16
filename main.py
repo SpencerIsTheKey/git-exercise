@@ -37,6 +37,7 @@ def main():
     print("\nWelcome to the calcuator! Please use a space between your all numbers and operators!\nUse '^^' to exit\n")
     while (True):
         inString = input("Math Expression: ")
+        #comment
         if(inString == '^^'):
             print("\nThank you!\n")
             print("Exiting...")
