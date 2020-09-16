@@ -43,7 +43,7 @@ def main():
             break
         result = operation(inString)
         if(isinstance(result, int)):
-            print("Result:          "+result)
+            print("Result:          "+str(result))
         else:
             print(result)
 
