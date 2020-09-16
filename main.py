@@ -4,12 +4,19 @@ def add(num1, num2):
 def sub(num1, num2):
     return int(num1) - int(num2)
 
+def div(num1, num2):
+    return int(num1) / int(num2)
+
+def mult(num1, num2):
+    return int(num1) * int(num2)
 
 def opDict(arr):
     return {
         '+' : add(arr[0], arr[2]),
         '-' : sub(arr[0], arr[2]),
-    }.get(arr[1],"Not a valid basic operator! Please use '+' and '-' for addition and subtraction")
+        '/' : div(arr[0], arr[2]),
+        '*' : mult(arr[0], arr[2])
+    }.get(arr[1],"Not a valid basic operator! Please use '+' and '-' for addition and subtraction, and '*' and ' /' for multiplication and division")
 
 def operation(inString):
     opArray = inString.split()
@@ -23,6 +30,8 @@ def operation(inString):
 def test():
     assert operation("3 + 3") == 6, "Adding isn't working"
     assert operation("3 - 3") == 0, "Subtracting isn't working"
+    assert operation("3 * 3") == 9, "Multiplying isn't working"
+    assert operation("3 / 3") == 1, "Dividing isn't working"
     
 def main():
     print("\nWelcome to the calcuator! Please use a space between your all numbers and operators!\nUse '^^' to exit\n")
